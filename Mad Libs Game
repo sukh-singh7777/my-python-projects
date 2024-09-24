@@ -1,0 +1,26 @@
+import random
+
+# Define multiple story templates
+stories = [
+    "Today I went to the {place}. It was a very {adjective} day. I saw a {noun} that was {verb}ing happily.",
+    "The {adjective} {noun} decided to go to the {place} to learn how to {verb}.",
+    "At the {place}, a {noun} was {verb}ing so {adjective}ly that everyone stopped to watch.",
+    "My {noun} loves to {verb} every time we visit the {place}. It always makes the day so {adjective}."
+]
+
+# Step 1: Get input from the user
+# Ask the user for words to fill in the blanks in the story
+place = input("Enter a place: ")
+adjective = input("Enter an adjective: ")
+noun = input("Enter a noun: ")
+verb = input("Enter a verb: ")
+
+# Step 2: Randomly select one of the story templates
+story_template = random.choice(stories)
+
+# Step 3: Create the story using the user's input
+story = story_template.format(place=place, adjective=adjective, noun=noun, verb=verb)
+
+# Step 4: Display the final story to the user
+print("\nHere is your Mad Libs story:")
+print(story)
